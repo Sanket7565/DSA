@@ -3,9 +3,9 @@ package ArrayList;
 import java.util.ArrayList;
 
 //BruteForce Approach O(n^2)
-public class Pair_Sum1
+public class Pair_Sum2
 {
-    private static boolean pairSum1_BruteForce(ArrayList<Integer> list, int target)
+    private static boolean pairSum2_BruteForce(ArrayList<Integer> list, int target)
     {
         for(int i=0; i<list.size();i++)
         {
@@ -21,12 +21,23 @@ public class Pair_Sum1
     }
 
     //Two Pointer Approach O(n)
-    private static boolean pairSum1_TwoPointer(ArrayList<Integer> list, int target)
+    private static boolean pairSum2_TwoPointer(ArrayList<Integer> list, int target)
     {
-        int left=0;
-        int right=list.size()-1;
+        int bp=-1;
+        //finding breaking point
+                for(int i=0; i<list.size();i++)
+                {
+                    if(list.get(i)>list.get((i+1)%list.size()))
+                    {
+                        bp=i;
+                        break;
+                    }
+                }
 
-        while(left<right)
+        int left=bp+1;
+        int right=bp;
+
+        while(left!=right)
         {
             if(list.get(left)+list.get(right)==target)
             {
@@ -34,11 +45,11 @@ public class Pair_Sum1
             }
             else if(list.get(left)+list.get(right)<target)
             {
-                left++;
+                left=(left+1)%list.size();
             }
             else
             {
-                right--;
+                right=(right-1+list.size())%list.size();
             }
         }
         return false;
@@ -50,17 +61,17 @@ public class Pair_Sum1
     {
 
         ArrayList<Integer> list= new ArrayList<>();
-        list.add(1);
-        list.add(2);
+        list.add(11);
+        list.add(12);
         list.add(3);
         list.add(4);
         list.add(5);
 
-        int target=5;
+        int target=17;
 
-        System.out.println(pairSum1_BruteForce(list,target));
+        //System.out.println(pairSum2_BruteForce(list,target));
 
-        System.out.println(pairSum1_TwoPointer(list,target));
+        System.out.println(pairSum2_TwoPointer(list,target));
 
     }
 
