@@ -1,4 +1,4 @@
-package ArrayList;
+package ArrayList_2_Pointer;
 
 import java.util.ArrayList;
 
@@ -35,7 +35,7 @@ public class Arraylist_Maximum
             }
         }
 
-        System.out.println("Max Value in ArrayList is: " + max);
+        System.out.println("Max Value in ArrayList_2_Pointer is: " + max);
 
     }
 

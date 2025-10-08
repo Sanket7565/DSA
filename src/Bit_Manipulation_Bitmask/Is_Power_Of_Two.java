@@ -1,4 +1,4 @@
-package Bit_Manipulation;
+package Bit_Manipulation_Bitmask;
 
 public class Is_Power_Of_Two
 {

@@ -1,10 +1,10 @@
-package ArrayList;
+package ArrayList_2_Pointer;
 
 import java.util.*;
 
 public class Arraylist_Multidemensional {
     public static void main(String[] args) {
-        // Main ArrayList (outer list)
+        // Main ArrayList_2_Pointer (outer list)
         ArrayList<ArrayList<Integer>> studentMarks = new ArrayList<>();
 
         // Student 1 marks

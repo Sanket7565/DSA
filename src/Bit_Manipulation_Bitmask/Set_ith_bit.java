@@ -1,4 +1,4 @@
-package Bit_Manipulation;
+package Bit_Manipulation_Bitmask;
 
 public class Set_ith_bit
 {

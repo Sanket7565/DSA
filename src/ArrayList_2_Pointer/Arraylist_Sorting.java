@@ -1,4 +1,4 @@
-package ArrayList;
+package ArrayList_2_Pointer;
 
 import java.util.ArrayList;
 import java.util.Collections;
